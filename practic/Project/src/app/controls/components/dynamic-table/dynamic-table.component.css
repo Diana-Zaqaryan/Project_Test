@@ -1,0 +1,29 @@
+
+table {
+    /*min-width: 900px;*/
+    width: 50%;
+    max-width: 1500px;
+    border: 2px solid #e0e0e0;
+
+}
+
+th, td {
+    border-left: 1px solid #e0e0e0;
+
+}
+
+mat-card {
+    width: 1500px;
+}
+
+button {
+    background: forestgreen;
+    justify-content: flex-end;
+    margin-right: 30px;
+    color: #ffffff;
+
+}
+
+.mat-form-field-infix {
+    padding: 8px 0 !important;
+}

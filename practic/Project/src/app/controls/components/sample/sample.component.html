@@ -1,0 +1,57 @@
+
+<div class="example-form" [formGroup]="form" >
+
+    <div style="display: flex; flex-direction: row; justify-content: space-between">
+      <mat-form-field class="example-half-width, code" appearance="outline" >
+        <mat-label>Project Code</mat-label>
+        <input matInput required formControlName="code">
+          <mat-error *ngIf=" form.get('code').touched
+          && form.get('code').invalid">
+              Project Code is required
+          </mat-error>
+
+      </mat-form-field>
+
+
+      <mat-form-field class="example-half-width, title" appearance="outline">
+        <mat-label>Project Title</mat-label>
+        <input matInput required formControlName="title" #projectTitle [maxLength]="50">
+          <mat-error *ngIf=" form.get('title').touched
+           && form.get('title').invalid">
+              Project Title is required
+          </mat-error>
+        <mat-hint> you can input {{maxLength- projectTitle.value.length}} </mat-hint>
+      </mat-form-field>
+
+    </div>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Description</mat-label>
+      <textarea matInput rows="10" cols="50" formControlName="description"></textarea>
+    </mat-form-field>
+
+
+    <div class="sample-form-wrapper">
+      <mat-form-field class="sample-form-wrapper__form-field" >
+        <mat-label>Implementation Status</mat-label>
+        <mat-select required formControlName="status">
+          <mat-option  *ngFor="let status of statuses"
+                       [value]="status.id">{{status.getName()}}</mat-option>
+        </mat-select>
+          <mat-error *ngIf=" form.get('status').touched && form.get('status').invalid">
+              Project Status is required
+          </mat-error>
+      </mat-form-field>
+
+
+      <div>
+        <app-date-duration formGroupName="dates"  ></app-date-duration>
+      </div>
+
+
+    </div>
+
+
+</div>
+
+

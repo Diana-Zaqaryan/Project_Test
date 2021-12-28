@@ -1,0 +1,15 @@
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 100%;
+}
+
+mat-form-field{
+    display: block;
+}
+
+button {
+    background: forestgreen;
+    margin-top: 10px;
+}

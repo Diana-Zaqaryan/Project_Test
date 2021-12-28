@@ -1,0 +1,24 @@
+ [
+    {
+      "id": 1,
+      "sectorId": 2,
+      "percent": 30
+    },
+    {
+      "id": 2,
+      "sectorId": 1,
+      "percent": 7
+    },
+    {
+      "id": 3,
+      "sectorId": 4,
+      "percent": 60
+    },
+    {
+      "id": 4,
+      "sectorId":  3,
+      "percent": 77
+    }
+
+  ]
+

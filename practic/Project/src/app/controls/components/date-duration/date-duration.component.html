@@ -1,0 +1,36 @@
+<div class="date-form" [formGroup]="form">
+    <mat-form-field appearance="outline">
+        <mat-label>Start date</mat-label>
+        <input matInput [matDatepicker]="mydate"  formControlName="startDate">
+        <mat-error *ngIf="form.get('startDate').touched && form.get('startDate').invalid">
+            Start date is required
+        </mat-error>
+        <mat-datepicker-toggle matSuffix [for]="mydate"></mat-datepicker-toggle>
+        <mat-datepicker #mydate></mat-datepicker>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+
+        <mat-label>End date</mat-label>
+        <input matInput [matDatepicker]="mydate1" formControlName="endDate" #input="matInput"
+               [errorStateMatcher]="errorMatcher" (dateInput)="findDuration( form.get('startDate').value)">
+
+        <mat-datepicker-toggle matSuffix [for]="mydate1"></mat-datepicker-toggle>
+        <mat-datepicker #mydate1></mat-datepicker>
+      <mat-error
+              *ngIf="(form.get('endDate').dirty
+                && form.hasError('notValid'))">
+        end Date can't be less than start Date
+      </mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+
+        <input matInput placeholder="Duration" formControlName="duration">
+    </mat-form-field>
+
+
+</div>
+

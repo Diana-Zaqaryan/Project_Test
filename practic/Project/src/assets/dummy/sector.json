@@ -1,0 +1,19 @@
+ [
+    {
+      "id": 1,
+      "name": "Health"
+    },
+    {
+      "id": 2,
+      "name": "Agricalture"
+    },
+    {
+      "id": 3,
+      "name": "Economy"
+    },
+    {
+      "id": 4,
+      "name": "Administrative"
+    }
+  ]
+

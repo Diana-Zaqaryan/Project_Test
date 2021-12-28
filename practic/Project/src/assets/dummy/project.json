@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1,
+    "projectCode": "Project-111",
+    "projectTitle": "title1",
+    "description": "some text",
+    "statusId": 1,
+    "startDate": 1122554451451,
+    "endDate": 1222694459953,
+    "duration": null,
+    "sectors": [
+      {
+        "id": 2,
+        "sectorId": 1,
+        "percent": 30
+      },
+      {
+        "id": 1,
+        "sectorId": 2,
+        "percent": 20
+      }
+    ],
+    "locations": [
+      {
+        "id": 1,
+        "countryId": 1,
+        "districtId": 4,
+        "percent": 10
+      },
+      {
+        "id": 2,
+        "countryId": 1,
+        "districtId": 2,
+        "percent": 15
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "projectCode": "Project-222",
+    "projectTitle": "title2 ",
+    "description": "Some description",
+    "statusId": 3,
+    "startDate": 1325694459953,
+    "endDate": null,
+    "duration": 20,
+    "sectors": [
+      {
+        "id": 1,
+        "sectorId": 3,
+        "percent": 25
+      },
+      {
+        "id": 2,
+        "sectorId": 4,
+        "percent": 35
+      }
+    ],
+    "locations": [
+      {
+        "id": 1,
+        "countryId": 2,
+        "districtId": 10,
+        "percent": 22
+      },
+      {
+        "id": 2,
+        "countryId": 3,
+        "districtId": 12,
+        "percent": 12
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "projectCode": "Project-333",
+    "projectTitle": "title333 ",
+    "description": "Some description3333",
+    "statusId": 4,
+    "startDate": 1515999999953,
+    "endDate": 1615999999953,
+    "duration": null,
+    "sectors": [
+      {
+        "id": 1,
+        "sectorId": 3,
+        "percent": 35
+      },
+      {
+        "id": 2,
+        "sectorId": 4,
+        "percent": 35
+      }
+    ],
+    "locations": [
+      {
+        "id": 1,
+        "countryId": 2,
+        "districtId": 10,
+        "percent": 5
+      },
+      {
+        "id": 2,
+        "countryId": 3,
+        "districtId": 12,
+        "percent": 47
+      }
+    ]
+  }
+]
+

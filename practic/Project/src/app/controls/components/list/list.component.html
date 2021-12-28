@@ -1,0 +1,66 @@
+<div class="list">
+
+    <div class="list">
+        <div class="mat-display-3">
+            Project's List
+        </div>
+        <mat-form-field appearance="standard">
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+        </mat-form-field>
+
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource"  matSort matSortStart="asc">
+
+                <ng-container *ngFor="let metaField of metaFields" matColumnDef="{{metaField.columnName}}">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{metaField.columnName}}</th>
+
+                    <div [ngSwitch]="metaField.type">
+                        <div *ngSwitchCase="META_FIELD_TYPE.DATE">
+                            <td mat-cell *matCellDef="let element">
+                                <a [routerLink]="['/project/',element.id]">  {{element[metaField.systemName] |date }}  </a>
+                            </td>
+                        </div>
+                        <div *ngSwitchDefault>
+                            <td mat-cell *matCellDef="let element">
+                                <a [routerLink]="['/project/',element.id]">  {{element[metaField.systemName] }} </a>
+                            </td>
+                        </div>
+
+
+                    </div>
+
+                </ng-container>
+
+
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef  mat-sort-header> Actions</th>
+                    <td mat-cell *matCellDef="let element">
+                        <button (click)="deleteproject(element.id)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button (click)="updateproject(element.id)"><a [routerLink]="['/project',element.id]">
+                            <mat-icon>edit</mat-icon>
+                        </a></button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="getSystemNames()"></tr>
+                <tr mat-row *matRowDef="let row; columns: getSystemNames();"></tr>
+
+            </table>
+            <div>
+            <a>
+                <button class="btn" [routerLink]="['/project',-1]">ADD</button>
+            </a>
+        </div>
+
+
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+        </div>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,194 @@
+ [
+    {
+      "id": 1,
+      "name": "Barguna",
+      "countryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Patuakhali",
+      "countryId": 1
+    },
+    {
+      "id": 3,
+      "name": "Feni",
+      "countryId": 1
+    },
+    {
+      "id": 4,
+      "name": "Dhaka",
+      "countryId": 1
+    },
+    {
+      "id": 5,
+      "name": "Khulna",
+      "countryId": 1
+    },
+    {
+      "id": 6,
+      "name": "Baranavichy",
+      "countryId": 2
+    },
+    {
+      "id": 7,
+      "name": "Lyakhavichy",
+      "countryId": 2
+    },
+    {
+      "id": 8,
+      "name": "Brahin",
+      "countryId": 2
+    },
+    {
+      "id": 9,
+      "name": "Loyew",
+      "countryId": 2
+    },
+    {
+      "id": 10,
+      "name": "Svietlahorsk",
+      "countryId": 2
+    },
+    {
+      "id": 11,
+      "name": "Prey Chhor",
+      "countryId": 3
+    },
+    {
+      "id": 12,
+      "name": "Chol Kir",
+      "countryId": 3
+    },
+    {
+      "id": 13,
+      "name": "Baray",
+      "countryId": 3
+    },
+    {
+      "id": 14,
+      "name": "Chhuk",
+      "countryId": 3
+    },
+    {
+      "id": 15,
+      "name": "Angk Snuolk",
+      "countryId": 3
+    },
+    {
+      "id": 16,
+      "name": "Adansi",
+      "countryId": 4
+    },
+    {
+      "id": 17,
+      "name": "Bekwai",
+      "countryId": 4
+    },
+    {
+      "id": 18,
+      "name": "Ejisu",
+      "countryId": 4
+    },
+    {
+      "id": 19,
+      "name": "Juaben",
+      "countryId": 4
+    },
+    {
+      "id": 20,
+      "name": "Obuasi",
+      "countryId": 4
+    },
+    {
+      "id": 21,
+      "name": "Hegyhát",
+      "countryId": 5
+    },
+    {
+      "id": 22,
+      "name": "Mohács",
+      "countryId": 5
+    },
+    {
+      "id": 23,
+      "name": "Sellye",
+      "countryId": 5
+    },
+    {
+      "id": 24,
+      "name": "Kamikawa",
+      "countryId": 6
+    },
+    {
+      "id": 25,
+      "name": "Abuta",
+      "countryId": 6
+    },
+    {
+      "id": 26,
+      "name": "Yūfutsu",
+      "countryId": 6
+    },
+    {
+      "id": 27,
+      "name": "Balqa",
+      "countryId": 7
+    },
+    {
+      "id": 28,
+      "name": "Madaba",
+      "countryId": 7
+    },
+    {
+      "id": 29,
+      "name": "Karak",
+      "countryId": 7
+    },
+    {
+      "id": 30,
+      "name": "Akkar",
+      "countryId": 8
+    },
+    {
+      "id": 31,
+      "name": "Beqaa",
+      "countryId": 8
+    },
+    {
+      "id": 32,
+      "name": "Baalbek-Hermel",
+      "countryId": 8
+    },
+    {
+      "id": 33,
+      "name": "Dedzal",
+      "countryId": 9
+    },
+    {
+      "id": 34,
+      "name": "Likoma",
+      "countryId": 9
+    },
+    {
+      "id": 35,
+      "name": "Zomba",
+      "countryId": 9
+    },
+    {
+      "id": 36,
+      "name": "Mechi",
+      "countryId": 10
+    },
+    {
+      "id": 37,
+      "name": "Dolakha",
+      "countryId": 10
+    },
+    {
+      "id": 38,
+      "name": "Baglung",
+      "countryId": 10
+    }
+
+  ]
+

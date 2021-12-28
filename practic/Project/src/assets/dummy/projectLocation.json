@@ -1,0 +1,165 @@
+ [
+    {
+      "id": 1,
+      "countryId": 1,
+      "districtId": 4,
+      "percent": 55
+    },
+    {
+      "id": 2,
+      "countryId": 1,
+      "districtId": 2,
+      "percent": 40
+    },
+    {
+      "id": 3,
+      "countryId": 2,
+      "districtId": 6,
+      "percent": 45
+    },
+    {
+      "id": 4,
+      "countryId": 2,
+      "districtId": 8,
+      "percent": 70
+    },
+    {
+      "id": 5,
+      "countryId": 2,
+      "districtId": 10,
+      "percent": 75
+    },
+    {
+      "id": 6,
+      "countryId": 3,
+      "districtId": 12,
+      "percent": 70
+    },
+    {
+      "id": 7,
+      "countryId": 3,
+      "districtId": 15,
+      "percent": 20
+    },
+    {
+      "id": 8,
+      "countryId": 3,
+      "districtId": 13,
+      "percent": 40
+    },
+    {
+      "id": 9,
+      "countryId": 3,
+      "districtId": 14,
+      "percent": 25
+    },
+    {
+      "id": 10,
+      "countryId": 4,
+      "districtId": 17,
+      "percent": 35
+    },
+    {
+      "id": 11,
+      "countryId": 4,
+      "districtId": 18,
+      "percent": 50
+    },
+    {
+      "id": 12,
+      "countryId": 4,
+      "districtId": 20,
+      "percent": 37
+    },
+    {
+      "id": 13,
+      "countryId": 5,
+      "districtId": 21,
+      "percent": 45
+    },
+    {
+      "id": 14,
+      "countryId": 5,
+      "districtId": 22,
+      "percent": 60
+    },
+    {
+      "id": 15,
+      "countryId": 5,
+      "districtId": 23,
+      "percent": 55
+    },
+    {
+      "id": 16,
+      "countryId": 6,
+      "districtId": 24,
+      "percent": 40
+    },
+    {
+      "id": 17,
+      "countryId": 6,
+      "districtId": 25,
+      "percent": 25
+    },
+    {
+      "id": 18,
+      "countryId": 6,
+      "districtId": 26,
+      "percent": 30
+    },
+    {
+      "id": 19,
+      "countryId": 7,
+      "districtId": 27,
+      "percent": 30
+    },
+    {
+      "id": 20,
+      "countryId": 7,
+      "districtId": 28,
+      "percent": 25
+    },
+    {
+      "id": 21,
+      "countryId": 7,
+      "districtId": 29,
+      "percent": 30
+    },
+    {
+      "id": 22,
+      "countryId": 8,
+      "districtId": 30,
+      "percent": 35
+    },
+    {
+      "id": 23,
+      "countryId": 8,
+      "districtId": 31,
+      "percent": 40
+    },
+    {
+      "id": 24,
+      "countryId": 9,
+      "districtId": 34,
+      "percent": 30
+    },
+    {
+      "id": 25,
+      "countryId": 9,
+      "districtId": 35,
+      "percent": 38
+    },
+    {
+      "id": 26,
+      "countryId": 10,
+      "districtId": 37,
+      "percent": 22
+    },
+    {
+      "id": 27,
+      "countryId": 10,
+      "districtId": 38,
+      "percent": 45
+    }
+  ]
+

@@ -1,0 +1,15 @@
+<mat-toolbar color="#acd" class="navbar">
+  <div> Project {{sample}}- Capacity building of farmer-based organizations in World Food Program.</div>
+
+  <div class="example-button-row">
+  <button mat-raised-button>  <a [routerLink]="['/']"> CANCEL </a> </button>
+
+    <button mat-raised-button (click)="saveProject()"
+            (click)="openSnackBar('Project has been saves successfully ... ', 'Done')"
+            [disabled]="!projectForm.valid">SAVE </button>
+
+    <button mat-raised-button (click)="save()"
+            [disabled]="!projectForm.valid" >SAVE & CLOSE</button>
+
+  </div>
+</mat-toolbar>

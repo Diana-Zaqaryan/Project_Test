@@ -1,0 +1,71 @@
+<div class="location-popup">
+    <h2>Add Project Location</h2>
+    <mat-dialog-content>
+        <div *ngIf="this.data.form"  [formGroup]="formForLocation">
+
+            <div class="countries">
+                <mat-form-field class="sample-form-wrapper__form-field" appearance="outline">
+                    <mat-label>Country</mat-label>
+                    <mat-dialog-content>
+                        <mat-select required formControlName="country">
+                            <mat-option *ngFor="let country of countries"
+                                        [value]="country.id">{{country.getName()}}</mat-option>
+                        </mat-select>
+                    </mat-dialog-content>
+                    <mat-error
+                            *ngIf=" formForLocation.get('country').touched && formForLocation.get('country').invalid">
+                        Country is required
+                    </mat-error>
+
+                </mat-form-field>
+            </div>
+
+
+            <div>
+                <mat-form-field class="sample-form-wrapper__form-field" appearance="outline">
+                    <mat-label>District</mat-label>
+                    <mat-dialog-content>
+                        <mat-select class="districts" required formControlName="district">
+                            <mat-option *ngFor="let district of districts"
+                                        [value]="district.id">{{district.getName()}}</mat-option>
+                        </mat-select>
+                    </mat-dialog-content>
+                    <mat-error
+                            *ngIf=" formForLocation.get('district').touched && formForLocation.get('district').invalid">
+                        District is required</mat-error>
+
+                </mat-form-field>
+            </div>
+
+
+            <div class="percent">
+                <mat-form-field class="sample-form-wrapper__form-field" appearance="outline">
+                    <mat-label>%</mat-label>
+                    <mat-dialog-content>
+                        <input matInput formControlName="percent" type="number">
+                    </mat-dialog-content>
+                    <mat-error *ngIf="formForLocation.get('percent').dirty
+                       && ((formForLocation.get('percent').hasError('min')
+                         || formForLocation.get('percent').hasError('max'))) ">
+                        percent must be in range 0% < percent < 100%
+                    </mat-error>
+                    <mat-error *ngIf="formForLocation.get('percent').dirty
+                    && formForLocation.get('percent').hasError('notValid') ">
+                        invalid percent, sum of percents must be less than 100%
+                    </mat-error>
+
+                </mat-form-field>
+
+            </div>
+        </div>
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+        <div>
+            <button mat-raised-button (click)="addProjectLocation()"
+                    [mat-dialog-close]="data" [disabled]="formForLocation.invalid"> ADD</button>
+        </div>
+    </mat-dialog-actions>
+
+
+</div>

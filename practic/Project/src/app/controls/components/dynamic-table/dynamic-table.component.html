@@ -1,0 +1,98 @@
+<mat-card>
+    <div class="mat-elevation-z8">
+        <ng-container *ngIf="isReady">
+            <table mat-table [dataSource]="dataSource" #table>
+                <ng-container *ngFor="let metaField of metaFields;let i=index" matColumnDef="{{metaField.systemName}}">
+                    <th mat-header-cell *matHeaderCellDef> {{metaField.columnName}}</th>
+                    <td mat-cell *matCellDef="let element">
+
+                        <div [ngSwitch]="metaField.type">
+
+                            <div *ngSwitchCase="META_FIELD_TYPE.CLASSIFIER">
+                                {{((element[metaField.systemName] | classifierPipe :
+                                classifiersMap.get(metaField.categoryName))|async)?.getName()}}
+
+                            </div>
+
+                            <div *ngSwitchDefault>
+                                {{ element[metaField.systemName]}}
+                            </div>
+
+                        </div>
+
+                    </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions</th>
+                    <td mat-cell *matCellDef="let element; let i=index">
+                        <mat-icon (click)="deleteAction(element,i)">delete</mat-icon>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="getSystemNames()"></tr>
+                <tr mat-row *matRowDef="let row; columns: getSystemNames();"></tr>
+            </table>
+
+
+            <div [formGroup]="formForSector">
+
+                <div *ngIf="isInlineAddable" style="margin: 20px 20px; ">
+                    <!--     ******* sector select  ******* -->
+                    <mat-form-field appearance="outline" style="margin-right: 170px; width: 250px">
+                        <div style="display: flex; flex-direction: row; justify-content: flex-start">
+
+                            <mat-select required formControlName="sector" #sector>
+                                <mat-option *ngFor="let sector of this.classifiersMap.get('sector') | async"
+                                            [value]="sector.id">{{sector.getName()}}</mat-option>
+                            </mat-select>
+                        </div>
+                        <mat-error *ngIf="formForSector.get('sector').touched && formForSector.get('sector').invalid">
+                            Sector is required
+                        </mat-error>
+                    </mat-form-field>
+
+
+                    <mat-form-field appearance="outline" style="margin-right: 40px">
+                        <input matInput type='number' formControlName="percent" #percent
+                               [errorStateMatcher]="errorMatcher">
+                        <mat-error *ngIf="formForSector.get('percent').dirty
+                       && (formForSector.get('percent').hasError('min')
+                         || formForSector.get('percent').hasError('max')) ">
+                            percent must be in range 0% < percent < 100%
+                        </mat-error>
+
+                        <mat-error *ngIf="( formForSector.get('percent').hasError('notValid'))">
+                            Invalid percent, sum of percents must be less than 100%
+                        </mat-error>
+                    </mat-form-field>
+
+
+                    <button mat-raised-button (click)="saveAction()" [disabled]="formForSector.invalid">ADD</button>
+
+                </div>
+
+
+                <div *ngIf="!isInlineAddable"
+                     style="display: flex; flex-direction: row; justify-content: flex-start; margin: 30px 30px">
+                    <button mat-raised-button (click)="openDialog()">ADD</button>
+                </div>
+            </div>
+
+
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+
+                           aria-label="Select page of periodic elements">
+            </mat-paginator>
+        </ng-container>
+
+    </div>
+
+</mat-card>
+
+
+
+
+
+

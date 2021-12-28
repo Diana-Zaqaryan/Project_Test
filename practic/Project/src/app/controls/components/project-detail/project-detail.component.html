@@ -1,0 +1,39 @@
+<div>
+    <div *ngIf="isReady" [formGroup]="projectForm" >
+
+        <div class="header">
+            <app-header  (saveProjectAndClose)="projectSaveAction()" (saveProjectAndStay)="saveAndStay()"
+                         [projectForm]="projectForm" ></app-header>
+        </div>
+
+        <div class="sample">
+            <mat-card class="example-card">
+                <app-sample formGroupName="sample"></app-sample>
+            </mat-card>
+        </div>
+
+
+        <div class="sectorClass">
+            <app-dynamic-table [isInlineAddable]="true"
+                               [metaFields]="sectorMetaFields"
+                               [categoryName]="'ProjectSector'"
+                               [formGroup]="projectForm"
+                               formArrayName="projectSectors"
+                               (onSave)="addProjectSector($event)"
+                               (onDelete)="deleteProjectSector($event)"></app-dynamic-table>
+        </div>
+
+
+        <div class="locationClass">
+            <app-dynamic-table [isInlineAddable]="false"
+                               [metaFields]="locationMetaFields"
+                               [categoryName]="'ProjectLocation'"
+                               [formGroup]="projectForm"
+                               formArrayName="projectLocations"
+                               (onDelete)="deleteProjectLocations($event)"
+                               (onSaveProjectLocation)="addProjectLocation($event)"
+            ></app-dynamic-table>
+        </div>
+
+    </div>
+</div>

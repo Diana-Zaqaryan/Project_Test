@@ -1,0 +1,53 @@
+table {
+ min-width: 1500px;
+    border: 1px solid #000000;
+    margin: 50px auto;
+}
+
+th, td {
+    border-left: 1px solid #e0e0e0;
+    font-size: 18px;
+}
+th {
+    color: black;
+
+}
+
+button{
+    margin-right: 5px;
+}
+a{
+  text-decoration: none;
+    color: #5e81ac;
+}
+td{
+    font-size: 18px;
+}
+.list{
+    min-width: 1500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+    margin-top: 30px;
+
+
+}
+
+.mat-display-3{
+    color: forestgreen;
+font-style: italic;
+    text-decoration: underline;
+}
+
+
+.btn{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #cccccc;
+    background: forestgreen;
+    border: none;
+
+}
